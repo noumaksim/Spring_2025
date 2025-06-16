@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Факультеты НГТУ им. Р.Е. Алексеева</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Обновлённые стили с квадратными фото */
+        .faculties-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .faculty-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .faculty-header h1 {
+            color: #003366;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .faculty-header p {
+            color: #555;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .faculty-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .faculty-image-container {
+            width: 180px;
+            height: 180px;
+            margin: 15px auto 0;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #003366;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .faculty-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .faculty-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        .faculty-title {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 10px 0 15px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .faculty-specialties {
+            margin-top: 10px;
+        }
+        
+        .specialty-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .specialty-item::before {
+            content: '•';
+            color: #003366;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .faculty-features {
+            background: #f5f9ff;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 0.85rem;
+        }
+        
+        .faculty-features strong {
+            color: #003366;
+        }
+        
+        @media (max-width: 768px) {
+            .faculty-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .faculty-header h1 {
+                font-size: 2rem;
+            }
+            
+            .faculty-image-container {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>НГТУ им. Р.Е. Алексеева</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="faculties.html" class="active">Факультеты</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="faculties-container">
+        <div class="faculty-header">
+            <h1>Факультеты НГТУ им. Р.Е. Алексеева</h1>
+            <p>Нижегородский государственный технический университет предлагает широкий спектр образовательных программ</p>
+        </div>
+        
+        <div class="faculty-grid">
+            <!-- Институт транспортных систем -->
+            <div class="faculty-card">
+                <div class="faculty-image-container">
+                    <img src="images/faculties/transport.jpg" alt="Транспортный факультет" class="faculty-image">
+                </div>
+                <div class="faculty-content">
+                    <h3 class="faculty-title">Институт транспортных систем</h3>
+                    <div class="faculty-specialties">
+                        <h4>Основные направления:</h4>
+                        <div class="specialty-item">Технология транспортных процессов</div>
+                        <div class="specialty-item">Наземные транспортные комплексы</div>
+                        <div class="specialty-item">Эксплуатация машин</div>
+                    </div>
+                    <div class="faculty-features">
+                        <strong>Особенности:</strong> Подготовка специалистов для автомобильной и дорожной отраслей.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Институт радиоэлектроники -->
+            <div class="faculty-card">
+                <div class="faculty-image-container">
+                    <img src="images/faculties/it.jpg" alt="IT факультет" class="faculty-image">
+                </div>
+                <div class="faculty-content">
+                    <h3 class="faculty-title">Институт радиоэлектроники</h3>
+                    <div class="faculty-specialties">
+                        <h4>Основные программы:</h4>
+                        <div class="specialty-item">Радиотехника</div>
+                        <div class="specialty-item">Информационные технологии</div>
+                        <div class="specialty-item">Вычислительная техника</div>
+                    </div>
+                    <div class="faculty-features">
+                        <strong>Партнёры:</strong> Сотрудничает с Ростелекомом и IT-компаниями.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Институт ядерной энергетики -->
+            <div class="faculty-card">
+                <div class="faculty-image-container">
+                    <img src="images/faculties/nuclear.jpg" alt="Ядерный факультет" class="faculty-image">
+                </div>
+                <div class="faculty-content">
+                    <h3 class="faculty-title">Институт ядерной энергетики</h3>
+                    <div class="faculty-specialties">
+                        <h4>Специальности:</h4>
+                        <div class="specialty-item">Ядерная энергетика</div>
+                        <div class="specialty-item">Ядерные технологии</div>
+                        <div class="specialty-item">Атомные станции</div>
+                    </div>
+                    <div class="faculty-features">
+                        <strong>Достижения:</strong> Топ-10 в России по ядерной энергетике.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Институт химических технологий -->
+            <div class="faculty-card">
+                <div class="faculty-image-container">
+                    <img src="images/faculties/chemistry.jpg" alt="Химический факультет" class="faculty-image">
+                </div>
+                <div class="faculty-content">
+                    <h3 class="faculty-title">Институт химических технологий</h3>
+                    <div class="faculty-specialties">
+                        <h4>Направления:</h4>
+                        <div class="specialty-item">Химическая технология</div>
+                        <div class="specialty-item">Биотехнология</div>
+                        <div class="specialty-item">Нефтегазовое дело</div>
+                    </div>
+                    <div class="faculty-features">
+                        <strong>Программы:</strong> Топ-12 в России по химическим технологиям.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Институт электроэнергетики -->
+            <div class="faculty-card">
+                <div class="faculty-image-container">
+                    <img src="images/faculties/power.jpg" alt="Энергетический факультет" class="faculty-image">
+                </div>
+                <div class="faculty-content">
+                    <h3 class="faculty-title">Институт электроэнергетики</h3>
+                    <div class="faculty-specialties">
+                        <h4>Кафедры:</h4>
+                        <div class="specialty-item">Теплоэнергетика</div>
+                        <div class="specialty-item">Электроэнергетика</div>
+                        <div class="specialty-item">Энергетическое машиностроение</div>
+                    </div>
+                    <div class="faculty-features">
+                        <strong>Проекты:</strong> Топ-15 в России по энергетике.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Институт экономики -->
+            <div class="faculty-card">
+                <div class="faculty-image-container">
+                    <img src="images/faculties/economy.jpg" alt="Экономический факультет" class="faculty-image">
+                </div>
+                <div class="faculty-content">
+                    <h3 class="faculty-title">Институт экономики</h3>
+                    <div class="faculty-specialties">
+                        <h4>Специальности:</h4>
+                        <div class="specialty-item">Экономика</div>
+                        <div class="specialty-item">Менеджмент</div>
+                        <div class="specialty-item">Бизнес-информатика</div>
+                    </div>
+                    <div class="faculty-features">
+                        <strong>Оборудование:</strong> Современные лаборатории.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Институт машиностроения -->
+            <div class="faculty-card">
+                <div class="faculty-image-container">
+                    <img src="images/faculties/mechanical.jpg" alt="Машиностроительный факультет" class="faculty-image">
+                </div>
+                <div class="faculty-content">
+                    <h3 class="faculty-title">Институт машиностроения</h3>
+                    <div class="faculty-specialties">
+                        <h4>Специальности:</h4>
+                        <div class="specialty-item">Машиностроение</div>
+                        <div class="specialty-item">Прикладная механика</div>
+                        <div class="specialty-item">Робототехника</div>
+                    </div>
+                    <div class="faculty-features">
+                        <strong>Достижения:</strong> Топ-20 в России по машиностроению.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 НГТУ им. Р.Е. Алексеева. Все права защищены.</p>
+    </footer>
+    
+    <script src="script.js"></script>	
+</body>
+</html>
